@@ -4,9 +4,9 @@ export const MenuCon = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap : 20px;
+  /* margin: 10px; */
   width: 100%;
-  height: 60%;
+  height: 70%;
   background-color: #ECD7CA;
 `;
 

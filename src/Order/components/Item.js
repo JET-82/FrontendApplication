@@ -3,7 +3,7 @@ import { ItemCon ,ItemDes, ItemDesPrice, ItemDesMenu, ItemDesCount, ItemImg} fro
 import ImgUrls from '../../assets/test-img/imgdata';
 
 
-function Item({imgindex}) {
+function Item({imgindex, menuname, description, price}) {
   //quantity count 
   const [number, setNumber] = useState(0);
   const onIncrease = () => {
@@ -22,12 +22,12 @@ function Item({imgindex}) {
     <div>
       <ItemCon>
         <div>
-        <ItemImg src={`${ImgUrls.urls[`${imgindex}`]}`} />
+        <ItemImg src={imgindex} />
         </div>
         <ItemDes>
-          <p>GOOS' K-bingsu</p>
-          <ItemDesMenu>Redbean</ItemDesMenu>
-          <ItemDesPrice>$14.25</ItemDesPrice>
+          <p>{menuname}</p>
+          <ItemDesMenu>{description}</ItemDesMenu>
+          <ItemDesPrice>{price}</ItemDesPrice>
         </ItemDes>
         <ItemDesCount>
           <button onClick={onDecrease}>-</button>

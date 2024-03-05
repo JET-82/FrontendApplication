@@ -5,9 +5,9 @@ import { OrderpageCon } from './Orderpage.style.js'
 function Order() {
   return (
     <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'100vh'}}>
-      <OrderpageCon>
+      <div>
         <Orderform />
-      </OrderpageCon>
+      </div>
 
     </div>
   )

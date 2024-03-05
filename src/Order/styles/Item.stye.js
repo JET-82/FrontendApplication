@@ -4,10 +4,12 @@ export const ItemCon = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
+  margin-bottom: 5px;
   height: 100px;
-  width: 300px;
+  width: 360px;
   background-color: whitesmoke;
   font-family: "Madi";
+  /* font-size: 15px; */
   border-radius: 20px;
   padding: 0 10px;
 `;
@@ -26,15 +28,14 @@ export const ItemDes = styled.div`
 export const ItemDesPrice = styled.p`
   display: flex;
   flex-direction: column;
-  width: 50%;
   color: #FB8A22;
 `
 
 export const ItemDesMenu = styled.p`
   display: flex;
   flex-direction: column;
-  width: 50%;
   color: gray;
+
 `
 export const ItemDesCount = styled.p`
   display: flex;
