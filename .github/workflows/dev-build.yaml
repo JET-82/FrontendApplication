@@ -28,7 +28,6 @@ jobs:
 
       - name: Build source
         id: build-source
-        uses: install-dependencies
         env:
           BACKEND_URL: ${{ secrets.REACT_APP_BASE_URL }}
         run: npm run build
