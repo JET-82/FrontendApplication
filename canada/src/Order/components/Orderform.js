@@ -1,15 +1,19 @@
 import React from 'react';
 import { useQuery } from "@tanstack/react-query";
+import {useRecoilValue } from "recoil";
 import Item from './Item';
 import { GETMENUAPI } from "../../constants/api";
 import axios from "axios";
-import { MenuCon, Header, OrderBtn } from '../styles/Orderform.style';
+import { MenuCon, Header, OrderBtn, Total } from '../styles/Orderform.style';
 import { getMenu } from '../hooks/useGetMenu';
 import { Preshow } from '../styles/Orderform.style';
 import { OrderpageCon} from '../../pages/Orderpage.style';
+import { countAtom } from '../recoil';
+import { createOrder } from '../hooks/usePostOrder';
 
 function Orderform() {
-
+  const total = useRecoilValue(countAtom);
+  console.log(total)
   const { isLoading, data: menuList } = useQuery({
     queryKey: ["menuQueryKey"],
     queryFn: getMenu,
@@ -18,7 +22,7 @@ function Orderform() {
   })
   // console.log(menuList)
 
-  const currentIdx = 1
+  const onPostOrder = () => (createOrder())
   return (
     <>
     {isLoading ? (
@@ -32,16 +36,15 @@ function Orderform() {
           {menuList.data?.response.map((item) => (
             <Item key={item.foodId} imgindex={item.imageLink} menuname={item.foodName} description={item.description} price={item.price}/>
           ))}
-          {/* <Item imgindex={currentIdx} />
-          <Item imgindex={currentIdx +1} />
-          <Item imgindex={currentIdx +2} /> */}
         </MenuCon>
         <Preshow>
-          <div style={{display:'flex'}}>
+          <Total>
             <div>total</div>
-            <div>$26.00</div>
-          </div>
+            <div>{total}</div>
+            {/* {total ? (<div>{total}</div>): (<p>$0</p>)} */}
+          </Total>
           <OrderBtn>ORDER</OrderBtn>
+          {/* <OrderBtn onClick={onPostOrder}>ORDER</OrderBtn> */}
         </Preshow>
       </OrderpageCon>
     )

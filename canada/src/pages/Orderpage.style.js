@@ -11,5 +11,6 @@ export const OrderpageCon = styled.div`
   /* width: 360px */
   height: 700px;
   background-color: white;
+  box-shadow: 2px 4px 8px;
   
 `;

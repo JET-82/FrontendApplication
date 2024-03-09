@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export const orderAtom = atom({
-	key: "orderAtom",
-	default : []
+export const countAtom = atom({
+	key: "countAtom",
+	default : 0
 })

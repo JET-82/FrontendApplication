@@ -1,9 +1,13 @@
-import React from 'react'
+import { POSTORDERAPI } from "../../constants/api";
+import axios from "axios";
 
-function usePostOrder() {
-  return (
-    <div>usePostOrder</div>
-  )
+
+export async function createOrder() {
+  const response = await axios.post(POSTORDERAPI,{
+    "describe": "bulgogi flavor",
+    "foodName": "Kimbap",
+    "price": "$12.00"
+  });
+  console.log(response)
+  return response;
 }
-
-export default usePostOrder

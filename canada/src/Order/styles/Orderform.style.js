@@ -26,12 +26,22 @@ export const Header = styled.div`
 
 
 export const Preshow = styled.div`
-  height: 25%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
   width: 100%;
+  margin-top: 5px;
   /* background-color: white; */
 `;
 
-
+export const Total = styled.div`
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Madi';
+  gap: 200px;
+`
 export const OrderBtn = styled.button`
   background-color: white;
   width: 300px;
