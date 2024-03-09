@@ -1,6 +1,5 @@
 import React from 'react'
 import Orderform from '../Order/components/Orderform'
-import { OrderpageCon } from './Orderpage.style.js'
 
 function Order() {
   return (

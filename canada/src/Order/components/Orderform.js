@@ -2,8 +2,6 @@ import React from 'react';
 import { useQuery } from "@tanstack/react-query";
 import {useRecoilValue } from "recoil";
 import Item from './Item';
-import { GETMENUAPI } from "../../constants/api";
-import axios from "axios";
 import { MenuCon, Header, OrderBtn, Total } from '../styles/Orderform.style';
 import { getMenu } from '../hooks/useGetMenu';
 import { Preshow } from '../styles/Orderform.style';
@@ -22,7 +20,7 @@ function Orderform() {
   })
   // console.log(menuList)
 
-  const onPostOrder = () => (createOrder())
+  // const onPostOrder = () => (createOrder())
   return (
     <>
     {isLoading ? (

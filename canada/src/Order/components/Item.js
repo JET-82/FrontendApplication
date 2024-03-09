@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState} from "recoil";
 import { ItemCon ,ItemDes, ItemDesPrice, ItemDesMenu, ItemDesCount, ItemImg} from '../styles/Item.stye'
-import ImgUrls from '../../assets/test-img/imgdata';
 import { countAtom } from '../recoil';
 
 
