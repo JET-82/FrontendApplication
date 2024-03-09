@@ -24,7 +24,11 @@ jobs:
 
       - name: Install Dependencies
         id: install-dependencies
-        run: npm install
+        run: |
+          cat /etc/os-release
+          node -v
+          npm version
+          npm install
 
       - name: Build source
         id: build-source
