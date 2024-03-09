@@ -3,10 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import Item from './Item';
 import { GETMENUAPI } from "../../constants/api";
 import axios from "axios";
-import { MenuCon, Header } from '../styles/Orderform.style';
+import { MenuCon, Header, OrderBtn } from '../styles/Orderform.style';
 import { getMenu } from '../hooks/useGetMenu';
-import Preshow from './Preshow';
-import { OrderpageCon } from '../../pages/Orderpage.style';
+import { Preshow } from '../styles/Orderform.style';
+import { OrderpageCon} from '../../pages/Orderpage.style';
 
 function Orderform() {
 
@@ -36,7 +36,13 @@ function Orderform() {
           <Item imgindex={currentIdx +1} />
           <Item imgindex={currentIdx +2} /> */}
         </MenuCon>
-        <Preshow></Preshow>
+        <Preshow>
+          <div style={{display:'flex'}}>
+            <div>total</div>
+            <div>$26.00</div>
+          </div>
+          <OrderBtn>ORDER</OrderBtn>
+        </Preshow>
       </OrderpageCon>
     )
     }

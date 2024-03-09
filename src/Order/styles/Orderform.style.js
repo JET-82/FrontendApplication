@@ -7,7 +7,7 @@ export const MenuCon = styled.div`
   /* margin: 10px; */
   width: 100%;
   height: 70%;
-  background-color: #ECD7CA;
+  background-color: orange;
 `;
 
 
@@ -18,8 +18,30 @@ export const Header = styled.div`
   font-family: 'Rock3D';
   font-family: 'Madi';
   font-size: 40px;
-  /* background-color: white; */
+  background-color: orange;
   width: 100%;
   margin:0;
   padding: 10px 0;
+`;
+
+
+export const Preshow = styled.div`
+  height: 25%;
+  width: 100%;
+  /* background-color: white; */
+`;
+
+
+export const OrderBtn = styled.button`
+  background-color: white;
+  width: 300px;
+  height: 60px;
+  border-radius: 15px;
+  font-family: Madi;
+  font-size: 1.2rem;
+  &:hover{
+      cursor: pointer;
+      background-color: orange;
+      color: white
+    }
 `;
