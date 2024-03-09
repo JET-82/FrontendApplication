@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Cache node modules
+        id: cache-node-modules
         uses: actions/cache@v1
         with:
           path: node_modules
@@ -22,9 +23,12 @@ jobs:
             ${{ runner.OS }}-
 
       - name: Install Dependencies
+        id: install-dependencies
         run: npm install
 
       - name: Build source
+        id: build-source
+        uses: install-dependencies
         env:
           BACKEND_URL: ${{ secrets.REACT_APP_BASE_URL }}
         run: npm run build
