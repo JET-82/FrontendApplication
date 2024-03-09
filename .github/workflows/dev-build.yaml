@@ -30,7 +30,9 @@ jobs:
         id: build-source
         env:
           BACKEND_URL: ${{ secrets.REACT_APP_BASE_URL }}
-        run: npm run build
+        run: |
+          ls -al
+          npm run build
 
       ###############gg
       # AWS ECR 배포 #
