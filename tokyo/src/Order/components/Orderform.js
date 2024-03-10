@@ -28,7 +28,7 @@ function Orderform() {
     ) : (
       <OrderpageCon>
         <Header>
-          <p>ORDER PICKUP</p>
+          <p>お持ち帰り</p>
         </Header>
         <MenuCon>
           {menuList.data?.response.map((item) => (
@@ -37,11 +37,11 @@ function Orderform() {
         </MenuCon>
         <Preshow>
           <Total>
-            <div>total</div>
+            <div>そうかかく</div>
             <div>{total}</div>
             {/* {total ? (<div>{total}</div>): (<p>$0</p>)} */}
           </Total>
-          <OrderBtn>ORDER</OrderBtn>
+          <OrderBtn>主文</OrderBtn>
           {/* <OrderBtn onClick={onPostOrder}>ORDER</OrderBtn> */}
         </Preshow>
       </OrderpageCon>
