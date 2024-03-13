@@ -7,7 +7,7 @@ import { getMenu } from '../hooks/useGetMenu';
 import { Preshow } from '../styles/Orderform.style';
 import { OrderpageCon} from '../../pages/Orderpage.style';
 import { countAtom } from '../recoil';
-import { createOrder } from '../hooks/usePostOrder';
+// import { createOrder } from '../hooks/usePostOrder';
 
 function Orderform() {
   const total = useRecoilValue(countAtom);
@@ -24,11 +24,11 @@ function Orderform() {
   return (
     <>
     {isLoading ? (
-      <div>Loading...</div>
+      <div>조금만 기다려주시옵소서...</div>
     ) : (
       <OrderpageCon>
         <Header>
-          <p>ORDER PICKUP</p>
+          <p>픽업 주문</p>
         </Header>
         <MenuCon>
           {menuList.data?.response.map((item) => (
@@ -37,11 +37,11 @@ function Orderform() {
         </MenuCon>
         <Preshow>
           <Total>
-            <div>total</div>
+            <div>총금액</div>
             <div>{total}</div>
             {/* {total ? (<div>{total}</div>): (<p>$0</p>)} */}
           </Total>
-          <OrderBtn>ORDER</OrderBtn>
+          <OrderBtn>주문하기</OrderBtn>
           {/* <OrderBtn onClick={onPostOrder}>ORDER</OrderBtn> */}
         </Preshow>
       </OrderpageCon>
