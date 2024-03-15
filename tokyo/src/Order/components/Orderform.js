@@ -7,7 +7,8 @@ import { getMenu } from '../hooks/useGetMenu';
 import { Preshow } from '../styles/Orderform.style';
 import { OrderpageCon} from '../../pages/Orderpage.style';
 import { countAtom } from '../recoil';
-import { createOrder } from '../hooks/usePostOrder';
+
+import arrowimg from '../../assets/test-img/arrow.png'
 
 function Orderform() {
   const total = useRecoilValue(countAtom);
@@ -28,22 +29,26 @@ function Orderform() {
     ) : (
       <OrderpageCon>
         <Header>
-          <p>お持ち帰り</p>
+          <div style={{ backgroundImage: `url(${arrowimg})`,backgroundSize:'auto', backgroundPosition:'center', width:'30px', height:'30px', border:'none', marginLeft:'10px'}}/>
+          <h2 style={{marginLeft:'110px'}}>お持ち帰り</h2>
         </Header>
-        <MenuCon>
+        <MenuCon style={{ backgroundColor: '#F5F5F5'}}>
           {menuList.data?.response.map((item) => (
             <Item key={item.foodId} imgindex={item.imageLink} menuname={item.foodName} description={item.description} price={item.price}/>
           ))}
         </MenuCon>
-        <Preshow>
-          <Total>
-            <div>そうかかく</div>
-            <div>{total}</div>
-            {/* {total ? (<div>{total}</div>): (<p>$0</p>)} */}
-          </Total>
-          <OrderBtn>主文</OrderBtn>
-          {/* <OrderBtn onClick={onPostOrder}>ORDER</OrderBtn> */}
-        </Preshow>
+        <div style={{height:'20%', width:'100%',position:'relative'}}>
+          <div style={{backgroundColor:'#F5F5F5', height:'100%', width:'100%', zIndex:'-1', position:'absolute'}}></div>
+          <Preshow>
+            <Total>
+              <div>そうかかく</div>
+              <div>{total}</div>
+              {/* {total ? (<div>{total}</div>): (<p>$0</p>)} */}
+            </Total>
+            <OrderBtn>主文</OrderBtn>
+            {/* <OrderBtn onClick={onPostOrder}>ORDER</OrderBtn> */}
+          </Preshow>
+        </div>
       </OrderpageCon>
     )
     }
