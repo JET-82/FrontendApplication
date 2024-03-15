@@ -30,7 +30,7 @@ function Orderform() {
       <OrderpageCon>
         <Header>
           <div style={{ backgroundImage: `url(${arrowimg})`,backgroundSize:'auto', backgroundPosition:'center', width:'30px', height:'30px', border:'none', marginLeft:'10px'}}/>
-          <h2 style={{marginLeft:'110px'}}>お持ち帰り</h2>
+          <h2 style={{marginLeft:'100px'}}>お持ち帰り</h2>
         </Header>
         <MenuCon style={{ backgroundColor: '#F5F5F5'}}>
           {menuList.data?.response.map((item) => (
