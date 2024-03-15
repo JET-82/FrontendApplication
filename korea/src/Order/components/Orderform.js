@@ -33,9 +33,9 @@ function Orderform() {
           <h2 style={{marginLeft:'100px'}}>My Cart</h2>
         </Header>
         <MenuCon style={{ backgroundColor: '#F5F5F5'}}>
-          {/* {menuList.data?.response.map((item) => (
+          {menuList.data?.response.map((item) => (
             <Item key={item.foodId} imgindex={item.imageLink} menuname={item.foodName} description={item.description} price={item.price}/>
-          ))} */}
+          ))}
         </MenuCon>
         <div style={{height:'20%', width:'100%',position:'relative'}}>
           <div style={{backgroundColor:'#F5F5F5', height:'100%', width:'100%', zIndex:'-1', position:'absolute'}}></div>
