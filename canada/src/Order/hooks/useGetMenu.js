@@ -16,7 +16,6 @@ import axios from "axios";
 
 export async function getMenu() {
   const response = await axios.get(GETMENUAPI);
-  response.data.response.map((item) => (console.log(item.imageLink)))
-
+  // response.data.response.map((item) => (console.log(item.imageLink)))
   return response;
 }

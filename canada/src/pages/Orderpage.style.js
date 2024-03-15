@@ -9,8 +9,9 @@ export const OrderpageCon = styled.div`
   // iphone 14 pro max
   width: 400px;
   /* width: 360px */
-  height: 700px;
-  background-color: white;
+  height: 650px;
+  /* background-color: white; */
+  background-color:'#EBE4DE';
   box-shadow: 2px 4px 8px;
   
 `;

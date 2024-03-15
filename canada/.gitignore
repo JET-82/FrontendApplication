@@ -23,5 +23,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# url
+# path
 /src/constants/baseUrl.js
+/src/setupProxy.js

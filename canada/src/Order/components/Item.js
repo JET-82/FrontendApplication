@@ -3,7 +3,6 @@ import { useRecoilState} from "recoil";
 import { ItemCon ,ItemDes, ItemDesPrice, ItemDesMenu, ItemDesCount, ItemImg} from '../styles/Item.stye'
 import { countAtom } from '../recoil';
 
-
 function Item({imgindex, menuname, description, price}) {
   //quantity count 
   const [number, setNumber] = useState(0);
@@ -28,10 +27,6 @@ function Item({imgindex, menuname, description, price}) {
   
 
 
-  // const increaseCount = () => {
-  //   setCount(count + 1);
-  // }
-
   return (
     <div>
       <ItemCon>
@@ -44,9 +39,9 @@ function Item({imgindex, menuname, description, price}) {
           <ItemDesPrice>{price}</ItemDesPrice>
         </ItemDes>
         <ItemDesCount>
-          <button onClick={onDecrease}>-</button>
+          <button onClick={onDecrease} style={{backgroundColor:'#FFE5B4', border:'none', borderRadius:'50%', baselineShiftAlign:'center'}}>-</button>
           <div>{number}</div>
-          <button onClick={onIncrease}>+</button>
+          <button onClick={onIncrease}style={{backgroundColor:'#FCAE1E', border:'none', borderRadius:'50%'}}>+</button>
         </ItemDesCount>
       </ItemCon>
     </div>
