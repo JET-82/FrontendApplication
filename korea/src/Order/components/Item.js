@@ -44,9 +44,9 @@ function Item({imgindex, menuname, description, price}) {
           <ItemDesPrice>{price}</ItemDesPrice>
         </ItemDes>
         <ItemDesCount>
-          <button onClick={onDecrease}>-</button>
+        <button onClick={onDecrease} style={{backgroundColor:'#FFE5B4', border:'none', borderRadius:'50%', baselineShiftAlign:'center'}}>-</button>
           <div>{number}</div>
-          <button onClick={onIncrease}>+</button>
+          <button onClick={onIncrease}style={{backgroundColor:'#FCAE1E', border:'none', borderRadius:'50%'}}>+</button>
         </ItemDesCount>
       </ItemCon>
     </div>

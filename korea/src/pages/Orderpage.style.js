@@ -5,12 +5,9 @@ export const OrderpageCon = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap : 20px; */
-  // iphone 14 pro max
   width: 400px;
-  /* width: 360px */
-  height: 700px;
-  background-color: white;
+  height: 650px;
+  background-color:'#EBE4DE';
   box-shadow: 2px 4px 8px;
   
 `;
